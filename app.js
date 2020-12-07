@@ -1,13 +1,12 @@
-let par = random();
-document.getElementsByTagName('p').innerHTML = random;
+let element = document.getElementsByTagName("p");
 
-
-function random (){
-    let randomNumber = Math.random();
-    randomNumber *= 100;
-    return Math.ceil(randomNumber);
+function alea() {
+    return Math.ceil(Math.random()*100);
 }
-console.log(random());
+
+for(let i = 0; i < element.length; i++){
+    element.item(i).innerHTML = alea().toString();
+}
 
 
 
